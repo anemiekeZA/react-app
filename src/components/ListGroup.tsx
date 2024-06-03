@@ -1,6 +1,12 @@
-import { MouseEvent } from "react";
+import { useState } from "react";
 
-function ListGroup() {
+interface ListGroupProps{
+    item: string[];
+    heading: string;
+} 
+
+  
+function ListGroup({items, heading}: Props) {
     // () <-- allows you to write JSX on multiple lines, 
     //can't add in an H1 element because the component only returns one element. 
     // <h1>List</h1> // React.createElement('h1) will be returned like this in JavaScript format.
@@ -17,19 +23,20 @@ function ListGroup() {
     //    <li className="list-group-item">A fourth item</li>
     //    <li className="list-group-item">And a fifth one</li>
     //</ul>
+    // you use this to import the mouse event handler import { MouseEvent } from "react";
 
-    let items = ["New York","San Francisco", "Tokyo","London","Paris"];
 
-    // Event Handler
-    const handleClick = (event: MouseEvent) => console.log(event);
+    // Hook
+    const [selectedIndex, setSelectedIndex] = useState(-1); // component state 
+
 
   return (   
     <>
-        <h1>List </h1>
+        <h1>{heading}</h1>
         {items.length === 0 && <p>No items found</p>}
         <ul className="list-group">
             {items.map((item, index) => (
-            <li className="list-group-item" key={item} onClick={handleClick}>{item}</li>
+            <li className={selectedIndex === index ? 'list-group-item active': 'list-group-item'}  key={item} onClick={() => {setSelectedIndex(index)}}>{item}</li>
         ))}  
         </ul>
     </>
