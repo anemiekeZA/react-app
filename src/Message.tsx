@@ -5,8 +5,8 @@ function Message(){
     //JSX: JavaScript XML
     const name = 'Annie';
     if (name)
-        return <h1>Hello {name}</h1>;
-    return <h1>Hello World</h1>
+        return <p className="message">Hello {name}</p>;
+    return <p className="message">Hello World</p>
 }
 
 export default Message;
