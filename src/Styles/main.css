@@ -56,11 +56,52 @@ div .parent {
 }
 
 div .Left-side-panel {
-    align-items: center;
-    justify-content: center;
     height: 100%;
     width: 25%;
     color: var(--textColor);
+}
+
+.Right-side-panel{
+    display: ruby;
+    text-align: center;
+    justify-content: center;
+    height: 100%;
+    background-color: black;
+}
+
+.Game-container{
+    height: 500px;
+    width: 250px;
+    margin: 10px;
+    background-color: #5767aa;
+}
+
+.img {
+    height: 200px;
+    width: 200px;
+    margin: 30px;
+    background-color: #29335c;
+
+}
+
+.GC-Bttn a{
+    display: flex;
+    margin: 30px;
+    color:#eee;
+    background-color: #29335c;
+
+}
+
+.GC-Bttn a:hover{
+    color:#eee;
+    background-color: #DB2B39;
+}
+
+.icon {
+    display: flex;
+    margin: 30px;
+    background-color: #29335c;
+
 }
 
 @media only screen and (max-width:1024px){

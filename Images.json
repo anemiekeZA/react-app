@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "img":"Images/AssasinsCreed.jpg"
+    },
+    {
+        "id": 2,
+        "img": "Images/CallOfDutyModernWarfare3.jpg"
+    },
+    {
+        "id": 3,
+        "img":"Images/DoomEternal.jpg"
+    },
+    {
+        "id": 4,
+        "img": "Images/DungeonsAndDragons.jpg"
+    },
+    {
+        "id": 5,
+        "img":"Images/ForestLegends.jpg"
+    },
+    {
+        "id": 6,
+        "img": "Images/Fortnite.jpg"
+    },
+    {
+        "id": 7,
+        "img":"Images/ForzaHorizon5.jpg"
+    },
+    {
+        "id": 8,
+        "img": "Images/LeagueOfLegends.jpg"
+    }
+]
+    
+  
