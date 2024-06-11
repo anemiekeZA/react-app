@@ -1,19 +1,26 @@
-import React  from "react";
+import React from "react";
 
 interface Props {
-    children: string;
-    color?: 'primary'| 'secondary'| 'danger'; // string literal
-    onClick: () => void;
+  imageData: { id: number; url: string }[];
+  id: number;
 }
 
-const GameContainer = ({children,onClick,color='secondary'}: Props) => {
+const GameContainer: React.FC<Props> = ({ imageData, id }) => {
+  const image = imageData.find((item) => item.id === id);
+
   return (
     <div className="Game-container">
-          <img className="img" src={"./Images/AssasinsCreed.jpg"}></img>
-          <p>This is text</p>
-          <a className="icon" href="/#"> Like Icon</a>
-    </div>      
-  )
-}
+      {image ? (
+        <div key={image.id}>
+          <img className="img" src={image.url} alt={`Image ${image.id}`} />
+        </div>
+      ) : (
+        <p>No image available</p>
+      )}
+      <p>This is text</p>
+      <a className="icon" href="/#"> Like Icon</a>
+    </div>
+  );
+};
 
-export default GameContainer
+export default GameContainer;

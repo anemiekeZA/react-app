@@ -13,7 +13,7 @@ function NavBar(){
 
   return (
     <header>
-      <h3>Logo</h3>
+      <img className="Logo" src="./Images/VortexGaming LogoNoColor.png"></img>
       <nav ref={navRef}>
         <a href='/#'>Home</a>
         <a href='/#'>Work</a>

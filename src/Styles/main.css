@@ -17,9 +17,9 @@ header {
     display:flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 100px;
     padding: 0 2rem;
-    background-color: var(--mainColor);
+    background-color: black;
     color: var(--textColor);
 }
 
@@ -44,7 +44,30 @@ header .nav-btn{
     opacity: 0;
 }
 
+.Logo{
+    height:230px;
+    width: 250px;
+}
 
+.banner{
+    display:flex;
+    margin-left: auto;
+    align-items:center;
+    text-align:left;   
+    height:360px; 
+    background-color: black;
+    background-size: contain;
+    /* background-image: image-set("./Images/VortexGamingLogo.png"); */
+    background-repeat: no-repeat;
+}
+
+.banner-img{   
+    display: inline-block;
+    margin-left: auto;
+    height:360px; 
+    width: max-content;
+    background-image: image-set("./Images/VortexGamingLogo.png"); 
+}
 .message{
     margin: 0 2rem;
     padding-top: 5px ;
@@ -58,6 +81,7 @@ div .parent {
 div .Left-side-panel {
     height: 100%;
     width: 25%;
+    background-color: #FF5F1F;
     color: var(--textColor);
 }
 
@@ -69,12 +93,14 @@ div .Left-side-panel {
     background-color: black;
 }
 
-.Game-container{
+.Game-container-outer{
     height: 500px;
     width: 250px;
-    margin: 10px;
-    background-color: #5767aa;
+    margin: 5px;
+    background-color: #FF5F1F;
+
 }
+
 
 .img {
     height: 200px;
@@ -120,7 +146,7 @@ div .Left-side-panel {
         align-items: center;
         justify-content: center;
         gap: 1.5rem;
-        background-color: var(--mainColor);
+        background-color: #FF5F1F;
         transition: 1s;
         transform: translateY(-100vh); /* transition for the page */
 
