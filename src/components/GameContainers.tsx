@@ -1,4 +1,5 @@
 import React from "react";
+import { BsFillHeartFill } from "react-icons/bs";
 
 interface Props {
   imageData: { id: number; url: string }[];
@@ -15,10 +16,10 @@ const GameContainer: React.FC<Props> = ({ imageData, id }) => {
           <img className="img" src={image.url} alt={`Image ${image.id}`} />
         </div>
       ) : (
-        <p>No image available</p>
+        <p className="p">No image available</p>
       )}
-      <p>This is text</p>
-      <a className="icon" href="/#"> Like Icon</a>
+      <p className="p">This is text</p>
+      <BsFillHeartFill  className="heart-icon"/>
     </div>
   );
 };

@@ -1,15 +1,16 @@
 
 *{
-
+    margin: 0px;
     box-sizing: border-box;
     font-family: 'Roboto','sans-serif';
+    text-decoration: none;
 
 }
 
 :root{
-    --mainColor: #29335c;
-    --mainColorLight: #5767aa;
-    --secondaryColor: #DB2B39;
+    --mainColor: #a00639;
+    --mainColorLight: #ce3682;
+    --secondaryColor: #FF5F1F;
     --textColor: #eee;
 }
 
@@ -22,6 +23,7 @@ header {
     background-color: black;
     color: var(--textColor);
 }
+
 
 nav a{
     margin: 0 2rem;
@@ -39,10 +41,20 @@ header .nav-btn{
     background: transparent;
     border: none;
     outline: none;
-    color: var(--textColor);
+    color: var(--textColor); 
     visibility: hidden;
     opacity: 0;
 }
+
+.profile-icon {
+    color: #eee;
+}
+
+.profile-icon :hover{
+    cursor: pointer;
+    color: #FF5F1F;
+}
+
 
 .Logo{
     height:230px;
@@ -50,8 +62,7 @@ header .nav-btn{
 }
 
 .banner{
-    display:flex;
-    margin-left: auto;
+    display: flex;
     align-items:center;
     text-align:left;   
     height:360px; 
@@ -62,27 +73,36 @@ header .nav-btn{
 }
 
 .banner-img{   
-    display: inline-block;
+    display: ruby;
     margin-left: auto;
     height:360px; 
     width: max-content;
     background-image: image-set("./Images/VortexGamingLogo.png"); 
 }
+
+.banner .btn-btn {
+    display: ruby;
+    margin-left: 350px;
+}
+
 .message{
     margin: 0 2rem;
     padding-top: 5px ;
     color: var(--textColor);
     text-decoration: none;
 }
-div .parent {
+
+.parent {
     display:flex;
+
 }
 
-div .Left-side-panel {
+.Left-side-panel {
+    padding: 3px;
     height: 100%;
-    width: 25%;
-    background-color: #FF5F1F;
+    width: 40%;
     color: var(--textColor);
+
 }
 
 .Right-side-panel{
@@ -97,7 +117,7 @@ div .Left-side-panel {
     height: 500px;
     width: 250px;
     margin: 5px;
-    background-color: #FF5F1F;
+    background-color:#2e2e2a70; ;
 
 }
 
@@ -106,28 +126,41 @@ div .Left-side-panel {
     height: 200px;
     width: 200px;
     margin: 30px;
-    background-color: #29335c;
+    background-color: #5c293a;
 
 }
 
-.GC-Bttn a{
+.heart-icon {
     display: flex;
     margin: 30px;
-    color:#eee;
-    background-color: #29335c;
+    color: #a00639;
+    
+}
+
+.heart-icon :hover{
+    color:#ce3682
+}
+
+
+.btn-btn{
+    padding: 15px;
+    border-radius: 30px;
+    background-color: #161515;
+}
+
+
+.btn-btn a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.btn-btn a:hover{
+    color:  #FF5F1F;
 
 }
 
-.GC-Bttn a:hover{
-    color:#eee;
-    background-color: #DB2B39;
-}
-
-.icon {
-    display: flex;
-    margin: 30px;
-    background-color: #29335c;
-
+.p{
+    color: #ffffff;
 }
 
 @media only screen and (max-width:1024px){
@@ -156,8 +189,89 @@ div .Left-side-panel {
         transform: none;
     }
 
+    .profile-icon {
+        color: #eee;
+        visibility: hidden;
 
+    }
+    
+    .profile-icon :hover{
+        cursor: pointer;
+        color: #FF5F1F;
+    }
+    
+    
+    .banner-img{   
+        display: ruby;
+        margin-left: auto;
+        height:360px; 
+        width: max-content;
+        background-image: image-set("./Images/VortexGamingLogo.png"); 
+    }
+
+    .banner .btn-btn {
+        display: ruby;
+        margin-left: auto;
+    }
 
 }
 
+@media only screen and (max-width:520px){
+    header .nav-btn{
+        display: flex;
+        visibility: visible;
+        margin-top: 40px;
+        opacity: 1;
+        color: #161515;
+    }
+
+    header nav{
+        visibility: hidden;
+    }
+
+    header .responsive_nav{
+        transform: none;
+    }
+
+    .profile-icon {
+        color: #eee;
+        visibility: hidden;
+
+    }
+    
+    .Logo {
+        visibility: hidden;
+    }    
+    .message {
+        visibility: hidden;
+    }
+
+    .banner{
+        display: block;
+        width: 450px;
+        height: 450px;
+        background-color: black;
+    }
+
+    .banner-img{   
+        width:450px;
+        background-image: image-set("./Images/VortexGamingLogo.png");  
+    }
+
+    .banner .btn-btn {
+        margin:15px 80px;
+        text-align: center;
+        justify-content: center;
+        height: 60px;
+        width: 250px;
+    }
+
+    .Left-side-panel {
+        visibility: hidden;
+    }
+
+    .Right-side-panel{
+        width: ;
+    }
+}
 
