@@ -60,7 +60,10 @@ function App() {
         <Alert onClose={() => setAlertVisibility(false)}>Alert</Alert>
       )}
       <div className="banner"> 
-        <img src="./Images/DoomEternal.jpg" className="banner-img" alt="Vortex Gaming Logo"/>
+        <Button onClick={() => setAlertVisibility(true)}>
+          <a href="/#">A world awaits, sign up</a>
+        </Button>
+        <img src="./Images/VortexGamingLogo.png" className="banner-img" alt="Vortex Gaming Logo"/>
       </div>
       <div className="parent">
         <div className="Left-side-panel">
@@ -73,15 +76,6 @@ function App() {
             </div>
           ))}
         </div>
-      </div>
-      <div className="banner"> 
-        <Button onClick={() => setAlertVisibility(true)}>
-          <a href="/#">A world awaits, sign up</a>
-        </Button>
-        <img src="./Images/VortexGamingLogo.png" className="banner-img" alt="Vortex Gaming Logo"/>
-      </div>
-      <div className="Footer">
-        <p >This is where our footer will go</p>
       </div>
     </div>
   );

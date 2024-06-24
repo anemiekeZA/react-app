@@ -1,25 +1,22 @@
-import React from "react";
+import React from 'react';
 import { BsFillHeartFill } from "react-icons/bs";
+import '../Styles/main.css'; // Ensure this file contains the CSS styles
 
-interface Props {
-  imageData: { id: number; url: string }[];
-  id: number;
-}
-
-const GameContainer: React.FC<Props> = ({ imageData, id }) => {
-  const image = imageData.find((item) => item.id === id);
-
+const GameContainer = ({ games }) => {
   return (
-    <div className="Game-container">
-      {image ? (
-        <div key={image.id}>
-          <img className="img" src={image.url} alt={`Image ${image.id}`} />
-        </div>
-      ) : (
-        <p className="p">No image available</p>
-      )}
-      <p className="p">This is text</p>
-      <BsFillHeartFill  className="heart-icon"/>
+    <div className="game-container">
+
+      <div className="game-items">
+        {games.map((game) => (
+          <div key={game.id} className="game-item">
+            <h2>{game.name}</h2>
+            {game.background_image && (
+              <img src={game.background_image} alt={game.name} width="200" />
+            )}
+            <BsFillHeartFill className="heart-icon" />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
