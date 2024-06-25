@@ -14,6 +14,10 @@
     --textColor: #eee;
 }
 
+.a{
+    text-decoration: none;
+}
+
 header {
     display:flex;
     align-items: center;
@@ -113,14 +117,6 @@ header .nav-btn{
     background-color: black;
 }
 
-.Footer{
-    display: flex;
-    padding: 35px;
-    height: 15px;
-    width: 100%;
-    background-color: #FF5F1F;
-}
-
 .Game-container-outer{
     height: auto;
     width: 300px;
@@ -195,6 +191,81 @@ header .nav-btn{
 .p{
     color: #ffffff;
 }
+
+
+.Footer{
+    display: flex;
+    padding: 10px;
+    height: 150px;
+    width: 100%;
+    color: #eee;
+    background-color: #030303;
+    border-top: 2px solid #302d2c2d;
+    border-bottom: 2px solid #302d2c2d;
+}
+
+
+.office-building-container{
+    display: inline-block;
+    padding: 10px;
+    height: 130px;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    border-right: 2px solid #FF5F1F;
+}
+
+
+.support-container{
+    display: inline-block;
+    padding: 10px;
+    height: 130px;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+    border-right: 2px solid #FF5F1F;
+}
+
+
+.support-container a{
+    text-decoration: none;
+    color: #eee;
+}
+
+.support-container a:hover{
+    color: #FF5F1F;
+}
+
+
+.social-media-container{
+    display: inline-block;
+    padding: 10px;
+    height: 130px;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+.social-media-container a{
+    text-decoration: none;
+    color: #eee;
+}
+
+.social-media-container a:hover{
+    color: #FF5F1F;
+}
+
+.clause-footer-container{
+    display: flex;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    color: #FF5F1F;
+    background-color: #000000;
+}
+
 
 @media only screen and (max-width:1024px){
     header .nav-btn{
@@ -303,8 +374,6 @@ header .nav-btn{
         visibility: hidden;
     }
 
-    .Right-side-panel{
-        width: ;
-    }
+   
 }
 

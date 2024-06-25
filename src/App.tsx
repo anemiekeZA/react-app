@@ -3,6 +3,7 @@ import NavBar from "./components/NavBar";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
+import Footer from "./components/footer";
 import GameContainer from "./components/GameContainers";
 import axios from 'axios';
 
@@ -80,8 +81,9 @@ function App() {
         </Button>
         <img src="./Images/VortexGamingLogo.png" className="banner-img" alt="Vortex Gaming Logo"/>
       </div>
-      <div className="Footer">
-        <p >This is where our footer will go</p>
+      <Footer/>
+      <div className='clause-footer-container'>
+      <p>Rawg.io is in no way affiliated or associated however to spread the love, I've included them please may you follow them for their content.</p>
       </div>
     </div>
   );
