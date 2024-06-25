@@ -83,7 +83,7 @@ function App() {
       </div>
       <Footer/>
       <div className='clause-footer-container'>
-      <p>Rawg.io is in no way affiliated or associated however to spread the love, I've included them please may you follow them for their content.</p>
+      <p>Rawg.io is in no way affiliated or associated however to spread the love I've included, them please may you follow them for their content.</p>
       </div>
     </div>
   );
