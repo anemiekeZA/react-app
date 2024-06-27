@@ -16,7 +16,7 @@ function NavBar(){
   return (
     <header>
       <img className="Logo" src="./Images/VortexGaming LogoNoColor.png"></img>
-      <nav ref={navRef}>
+      <nav ref={navRef} className="nav">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/latest-games">Latest Games</Link></li>
         <li><Link to="/latest-games">Game hub</Link></li>
