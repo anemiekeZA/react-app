@@ -1,6 +1,6 @@
 import React from 'react';
 import { BsFillHeartFill } from "react-icons/bs";
-import '../Styles/main.css'; // Ensure this file contains the CSS styles
+import '../Styles/main.css';
 
 const GameContainer = ({ games }) => {
   return (
