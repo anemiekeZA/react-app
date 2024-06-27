@@ -2,15 +2,12 @@ import React, { useEffect, useState } from "react";
 import NavBar from "./components/NavBar";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
-import ListGroup from "./components/ListGroup";
+import ListGroup from "./components/LeftPannel";
 import GameContainer from "./components/GameContainers";
 import axios from 'axios';
 
 function App() {
-  const currentYear = new Date().getFullYear();
-  const lastYear = currentYear - 1;
-  let items = ["Latest Games", "Best of the Year", "Popular in " + lastYear, "All Time Top 250", "PC Games", "Xbox Games", "PS Games", "Android Games"];
-  
+
   const [alertVisible, setAlertVisibility] = useState(false);
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);

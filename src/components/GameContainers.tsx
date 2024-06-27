@@ -5,7 +5,6 @@ import '../Styles/main.css';
 const GameContainer = ({ games }) => {
   return (
     <div className="game-container">
-
       <div className="game-items">
         {games.map((game) => (
           <div key={game.id} className="game-item">
@@ -16,7 +15,6 @@ const GameContainer = ({ games }) => {
           </div>
         ))}
       </div>
-
     </div>
   );
 };

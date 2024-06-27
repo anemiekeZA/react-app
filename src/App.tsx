@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
-import ListGroup from "./components/ListGroup";
+import LeftPannel from "./components/LeftPannel";
 import LatestGames from "./LatestGames";
 import Footer from "./components/footer";
 import GameContainer from "./components/GameContainers";
@@ -11,9 +11,8 @@ import axios from 'axios';
 
 function App() {
   const currentYear = new Date().getFullYear();
-  const lastYear = currentYear - 1;
-  let items = ["Latest Games", "Best of the Year", "Popular in " + lastYear, "All Time Top 250", "PC Games", "Xbox Games", "PS Games", "Android Games"];
-  
+
+
   const [alertVisible, setAlertVisibility] = useState(false);
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -40,7 +39,7 @@ function App() {
     fetchGames();
   }, []);
 
-  const handleSelectItem = (item: string) => {
+  const handleSelectItem = (item) => {
     console.log(item);
   };
 
@@ -49,47 +48,51 @@ function App() {
 
   // Distribute games data to each GameContainer
   const gameDisplayed = [];
-  const gameDisplayAmount = Math.ceil(games.length / 3);
-  for (let i = 0; i < games.length; i += gameDisplayAmount) {
-    gameDisplayed.push(games.slice(i, i + gameDisplayAmount));
+  const gameDisplayedAmount = Math.ceil(games.length / 3);
+  for (let i = 0; i < games.length; i += gameDisplayedAmount) {
+    gameDisplayed.push(games.slice(i, i + gameDisplayedAmount));
   }
 
   return (
-    <div>
-      <React.Fragment>
-        <NavBar />
-      </React.Fragment>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>Alert</Alert>
-      )}
-      <div className="banner"> 
-        <img src="./Images/DoomEternal.jpg" className="banner-img" alt="Vortex Gaming Logo"/>
-      </div>
-      <div className="parent">
-        <div className="Left-side-panel">
-          <ListGroup items={items} onSelectItem={handleSelectItem} />
+    <Router>
+      <div>
+        <React.Fragment>
+          <NavBar />
+        </React.Fragment>
+        {alertVisible && (
+          <Alert onClose={() => setAlertVisibility(false)}>Alert</Alert>
+        )}
+        <div className="banner"> 
+          <img src="./Images/DoomEternal.jpg" className="banner-img" alt="Vortex Gaming Logo"/>
         </div>
-        <div className="Right-side-panel">
-          {gameDisplayed.map((gameDisplayAmount, index) => (
-            <div className="Game-container-outer" key={index}>
-              <GameContainer games={gameDisplayAmount} />
-            </div>
-          ))}
+        <div className="parent">
+          <div className="Left-side-panel">
+            <LeftPannel/>
+          </div>
+          <div className="Right-side-panel">
+            {gameDisplayed.map((games, index) => (
+              <div className="Game-container-outer" key={index}>
+                <GameContainer games={games} />
+              </div>
+            ))}
+          </div>
         </div>
+        <div className="banner"> 
+          <Button onClick={() => setAlertVisibility(true)}>
+            <a href="/#">A world awaits, sign up</a>
+          </Button>
+          <img src="./Images/VortexGamingLogo.png" className="banner-img" alt="Vortex Gaming Logo"/>
+        </div>
+        <Footer/>
+        <div className='clause-footer-container'>
+          <p>Rawg.io is in no way affiliated or associated however to spread the love I've included, them please may you follow them for their content.</p>
+        </div>
+        <Routes>
+          <Route path="/latest-games" element={<LatestGames />} />
+        </Routes>
       </div>
-      <div className="banner"> 
-        <Button onClick={() => setAlertVisibility(true)}>
-          <a href="/#">A world awaits, sign up</a>
-        </Button>
-        <img src="./Images/VortexGamingLogo.png" className="banner-img" alt="Vortex Gaming Logo"/>
-      </div>
-      <Footer/>
-      <div className='clause-footer-container'>
-      <p>Rawg.io is in no way affiliated or associated however to spread the love I've included, them please may you follow them for their content.</p>
-      </div>
-      <Route path="/latest-games" element={<LatestGames />} />
-    </div>
+    </Router>
   );
-};
+}
 
 export default App;
