@@ -13,10 +13,10 @@ const GameContainer = ({ games }) => {
             {game.background_image && (
               <img src={game.background_image} alt={game.name} width="200" />
             )}
-            <BsFillHeartFill className="heart-icon" />
           </div>
         ))}
       </div>
+
     </div>
   );
 };

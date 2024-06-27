@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
 import ListGroup from "./components/ListGroup";
+import LatestGames from "./LatestGames";
 import Footer from "./components/footer";
 import GameContainer from "./components/GameContainers";
 import axios from 'axios';
@@ -46,10 +48,10 @@ function App() {
   if (error) return <p>Error: {error}</p>;
 
   // Distribute games data to each GameContainer
-  const gameChunks = [];
-  const chunkSize = Math.ceil(games.length / 3);
-  for (let i = 0; i < games.length; i += chunkSize) {
-    gameChunks.push(games.slice(i, i + chunkSize));
+  const gameDisplayed = [];
+  const gameDisplayAmount = Math.ceil(games.length / 3);
+  for (let i = 0; i < games.length; i += gameDisplayAmount) {
+    gameDisplayed.push(games.slice(i, i + gameDisplayAmount));
   }
 
   return (
@@ -68,9 +70,9 @@ function App() {
           <ListGroup items={items} onSelectItem={handleSelectItem} />
         </div>
         <div className="Right-side-panel">
-          {gameChunks.map((chunk, index) => (
+          {gameDisplayed.map((gameDisplayAmount, index) => (
             <div className="Game-container-outer" key={index}>
-              <GameContainer games={chunk} />
+              <GameContainer games={gameDisplayAmount} />
             </div>
           ))}
         </div>
@@ -85,8 +87,9 @@ function App() {
       <div className='clause-footer-container'>
       <p>Rawg.io is in no way affiliated or associated however to spread the love I've included, them please may you follow them for their content.</p>
       </div>
+      <Route path="/latest-games" element={<LatestGames />} />
     </div>
   );
-}
+};
 
 export default App;

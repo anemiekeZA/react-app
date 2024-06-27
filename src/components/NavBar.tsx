@@ -16,10 +16,10 @@ function NavBar(){
     <header>
       <img className="Logo" src="./Images/VortexGaming LogoNoColor.png"></img>
       <nav ref={navRef}>
-        <a href='/#'>Home</a>
-        <a href='/#'>Latest games</a>
-        <a href='/#'>Game hub</a>
-        <a href='/#'>Contact us</a>
+        <a href="#">Home</a>
+        <a href="./LatestGames.tsx">Latest games</a>
+        <a href="#">Game hub</a>
+        <a href="">Contact us</a>
         <button className="nav-btn nav-close-btn" onClick={showNavbar}>
           <FaTimes/>
         </button>
