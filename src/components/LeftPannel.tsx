@@ -7,7 +7,7 @@ function LeftPannel() {
   const navRef = useRef();
 
   return (
-    <nav ref={navRef} className="Left-side-panel">
+    <nav ref={navRef} >
       <div>
         <ul className="left-side-nav"> 
           <li><Link to="/latest-games">Latest Games</Link></li>

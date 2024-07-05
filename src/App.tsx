@@ -67,11 +67,11 @@ function App() {
         </div>
         <div className="parent">
           <div className="Left-side-panel">
-            <LeftPannel/>
+              <LeftPannel/>
           </div>
           <div className="Right-side-panel">
             {gameDisplayed.map((games, index) => (
-              <div className="Game-container-outer" key={index}>
+              <div key={index}>
                 <GameContainer games={games} />
               </div>
             ))}
