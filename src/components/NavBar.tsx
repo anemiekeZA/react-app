@@ -25,7 +25,7 @@ function NavBar(){
           <FaTimes/>
         </button>
       </nav>
-      {/* <Message>Hello {firstName}</Message> */}
+      <Message>Hello {name}</Message>
       <li><Link to=""><BsFillPersonLinesFill className="profile-icon"/></Link></li>
       <button className="nav-btn" onClick={showNavbar}>
         <FaBars/>
