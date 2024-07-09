@@ -12,7 +12,6 @@ import { IoLogoAndroid } from "react-icons/io";
 import { GiBackwardTime } from "react-icons/gi";
 import { IoLogoXbox } from "react-icons/io5";
 
-
 function LeftPannel() {
   const navRef = useRef();
 

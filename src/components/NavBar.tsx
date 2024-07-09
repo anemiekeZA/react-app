@@ -6,7 +6,7 @@ import { BsFillPersonLinesFill } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 
 function NavBar(){
-
+  
   const navRef = useRef();
   const name = '';
   const showNavbar = () => {
@@ -25,7 +25,7 @@ function NavBar(){
           <FaTimes/>
         </button>
       </nav>
-      <Message>Hello {name}</Message>
+      {/* <Message>Hello {firstName}</Message> */}
       <li><Link to=""><BsFillPersonLinesFill className="profile-icon"/></Link></li>
       <button className="nav-btn" onClick={showNavbar}>
         <FaBars/>

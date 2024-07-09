@@ -71,7 +71,7 @@ function App() {
           </div>
           <div className="Right-side-panel">
             {gameDisplayed.map((games, index) => (
-              <div key={index}>
+              <div className="Game-container-outer" key={index}>
                 <GameContainer games={games} />
               </div>
             ))}
